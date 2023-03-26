@@ -5,6 +5,6 @@
 [![Video](https://img.youtube.com/vi/Bhb8Vx7KVhs/0.jpg)](https://www.youtube.com/watch?v=Bhb8Vx7KVhs)
 
 ## Code Subsciber.cpp
-`Asadbek`
+!`Asadbek`
 
 
