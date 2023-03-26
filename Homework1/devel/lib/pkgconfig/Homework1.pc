@@ -1,0 +1,8 @@
+prefix=/home/asadbek/catkin_ws/Homework1/devel
+
+Name: Homework1
+Description: Description of Homework1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
