@@ -1,2 +1,0 @@
-Homework3
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/Homework3/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/Homework3/install -G Unix Makefiles

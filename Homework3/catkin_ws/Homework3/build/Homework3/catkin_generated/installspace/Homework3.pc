@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/catkin_ws/Homework3/install
-
-Name: Homework3
-Description: Description of Homework3
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
