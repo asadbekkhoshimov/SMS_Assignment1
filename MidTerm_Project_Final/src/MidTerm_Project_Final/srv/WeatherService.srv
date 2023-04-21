@@ -1,0 +1,5 @@
+float64 latitude
+float64 longitude
+---
+my_robot_msgs/Weather weather
+

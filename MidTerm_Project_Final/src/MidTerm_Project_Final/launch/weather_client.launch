@@ -1,0 +1,4 @@
+<launch>
+  <node name="weather_service_client" type="weather_client" output="screen"/>
+</launch>
+
