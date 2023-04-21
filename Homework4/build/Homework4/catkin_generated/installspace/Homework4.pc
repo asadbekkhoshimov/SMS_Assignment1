@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/SMS_Assignment1/Homework4/install
+
+Name: Homework4
+Description: Description of Homework4
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

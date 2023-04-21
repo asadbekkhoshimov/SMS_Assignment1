@@ -1,0 +1,2 @@
+Homework4
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/SMS_Assignment1/Homework4/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/SMS_Assignment1/Homework4/install -G Unix Makefiles

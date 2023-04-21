@@ -1,0 +1,58 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ef51b/fast && /usr/bin/make -f CMakeFiles/cmTC_ef51b.dir/build.make CMakeFiles/cmTC_ef51b.dir/build
+make[1]: Entering directory '/home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ef51b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_ef51b.dir/src.c.o   -c /home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ef51b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef51b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_ef51b.dir/src.c.o  -o cmTC_ef51b 
+/usr/bin/ld: CMakeFiles/cmTC_ef51b.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ef51b.dir/build.make:87: cmTC_ef51b] Error 1
+make[1]: Leaving directory '/home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ef51b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fdc25/fast && /usr/bin/make -f CMakeFiles/cmTC_fdc25.dir/build.make CMakeFiles/cmTC_fdc25.dir/build
+make[1]: Entering directory '/home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fdc25.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fdc25.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fdc25
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdc25.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_fdc25.dir/CheckFunctionExists.c.o  -o cmTC_fdc25  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_fdc25.dir/build.make:87: cmTC_fdc25] Error 1
+make[1]: Leaving directory '/home/ubuntu/SMS_Assignment1/Homework4/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_fdc25/fast] Error 2
+
+
+

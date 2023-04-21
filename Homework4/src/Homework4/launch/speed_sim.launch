@@ -1,0 +1,8 @@
+<launch>
+
+  <param name="wheel_radius" value="0.125" type="double"/>
+
+  <node name="rpm_pub_node" pkg="udemy_cpp_pkg" type="rpm_pub" />
+
+  <node name="speed_calc_node" pkg="udemy_cpp_pkg" type="speed_calc" />
+</launch>
