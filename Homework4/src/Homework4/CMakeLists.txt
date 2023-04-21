@@ -9,6 +9,8 @@ project(Homework4)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  std_msgs
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -57,7 +59,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   Service1.srv
 #   Service2.srv
 # )
-
+add_service_files(
+	FILES
+	OddEvenCheck.srv
+)
 ## Generate actions in the 'action' folder
 # add_action_files(
 #   FILES
@@ -70,7 +75,10 @@ find_package(catkin REQUIRED COMPONENTS
 #   DEPENDENCIES
 #   std_msgs  # Or other packages containing msgs
 # )
-
+generate_messages(
+  DEPENDENCIES
+  std_msgs
+)
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
 ################################################
@@ -148,6 +156,18 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+set(PYTHON_SCRIPTS
+  src/rpm_pub.py
+  src/service_client.py
+  src/service_server.py
+  src/speed_calc.py
+)
+foreach(script ${PYTHON_SCRIPTS})
+  execute_process(
+    COMMAND chmod +x ${PROJECT_SOURCE_DIR}/${script}
+  )
+endforeach()
+
 #############
 ## Install ##
 #############
@@ -189,7 +209,14 @@ include_directories(
 #   # myfile2
 #   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 # )
-
+catkin_install_python(
+  PROGRAMS
+  src/rpm_pub.py
+  src/speed_calc.py
+  src/service_client.py
+  src/service_server.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 #############
 ## Testing ##
 #############
