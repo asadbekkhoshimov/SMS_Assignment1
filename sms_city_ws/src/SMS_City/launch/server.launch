@@ -1,0 +1,4 @@
+<launch>
+  <node name="service_server" pkg="SMS_City" type="service_server" output="screen" />
+</launch>
+
