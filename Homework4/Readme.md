@@ -1,4 +1,7 @@
 # Homework4
+##Video
+[![Homework4](https://img.youtube.com/vi/O3l16i5b9U8/0.jpg)](https://youtu.be/O3l16i5b9U8)
+
 ## Codes
 ### rpm_pub.py
 
