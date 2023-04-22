@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/SMS_Assignment1/Homework4/src/Homework4
+# Install script for directory: /home/asadbek/Desktop/Homework4/src/Homework4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/SMS_Assignment1/Homework4/install")
+  set(CMAKE_INSTALL_PREFIX "/home/asadbek/Desktop/Homework4/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,69 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/SMS_Assignment1/Homework4/build/Homework4/catkin_generated/installspace/Homework4.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Homework4/srv" TYPE FILE FILES "/home/asadbek/Desktop/Homework4/src/Homework4/srv/OddEvenCheck.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Homework4/cmake" TYPE FILE FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/Homework4-msg-paths.cmake")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/asadbek/Desktop/Homework4/devel/include/Homework4")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/asadbek/Desktop/Homework4/devel/share/roseus/ros/Homework4")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/asadbek/Desktop/Homework4/devel/share/common-lisp/ros/Homework4")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/asadbek/Desktop/Homework4/devel/share/gennodejs/ros/Homework4")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/asadbek/Desktop/Homework4/devel/lib/python3/dist-packages/Homework4")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/asadbek/Desktop/Homework4/devel/lib/python3/dist-packages/Homework4")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/Homework4.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Homework4/cmake" TYPE FILE FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/Homework4-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Homework4/cmake" TYPE FILE FILES
-    "/home/ubuntu/SMS_Assignment1/Homework4/build/Homework4/catkin_generated/installspace/Homework4Config.cmake"
-    "/home/ubuntu/SMS_Assignment1/Homework4/build/Homework4/catkin_generated/installspace/Homework4Config-version.cmake"
+    "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/Homework4Config.cmake"
+    "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/Homework4Config-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Homework4" TYPE FILE FILES "/home/ubuntu/SMS_Assignment1/Homework4/src/Homework4/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/Homework4" TYPE FILE FILES "/home/asadbek/Desktop/Homework4/src/Homework4/package.xml")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Homework4" TYPE PROGRAM FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/rpm_pub.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Homework4" TYPE PROGRAM FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/speed_calc.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Homework4" TYPE PROGRAM FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/service_server.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/Homework4" TYPE PROGRAM FILES "/home/asadbek/Desktop/Homework4/build/Homework4/catkin_generated/installspace/service_client.py")
 endif()
 

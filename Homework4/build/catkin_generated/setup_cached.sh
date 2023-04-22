@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/ubuntu/SMS_Assignment1/Homework4/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/ubuntu/SMS_Assignment1/Homework4/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/ubuntu/SMS_Assignment1/Homework4/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/ubuntu/SMS_Assignment1/Homework4/src:$ROS_PACKAGE_PATH"
+export PWD='/home/asadbek/Desktop/Homework4/build'

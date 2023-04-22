@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/SMS_Assignment1/Homework4/src
+CMAKE_SOURCE_DIR = /home/asadbek/Desktop/Homework4/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/SMS_Assignment1/Homework4/build
+CMAKE_BINARY_DIR = /home/asadbek/Desktop/Homework4/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ Homework4/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_expo
 .PHONY : Homework4/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 Homework4/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/ubuntu/SMS_Assignment1/Homework4/build/Homework4 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/asadbek/Desktop/Homework4/build/Homework4 && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : Homework4/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 Homework4/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/ubuntu/SMS_Assignment1/Homework4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/SMS_Assignment1/Homework4/src /home/ubuntu/SMS_Assignment1/Homework4/src/Homework4 /home/ubuntu/SMS_Assignment1/Homework4/build /home/ubuntu/SMS_Assignment1/Homework4/build/Homework4 /home/ubuntu/SMS_Assignment1/Homework4/build/Homework4/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/asadbek/Desktop/Homework4/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/asadbek/Desktop/Homework4/src /home/asadbek/Desktop/Homework4/src/Homework4 /home/asadbek/Desktop/Homework4/build /home/asadbek/Desktop/Homework4/build/Homework4 /home/asadbek/Desktop/Homework4/build/Homework4/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Homework4/CMakeFiles/_catkin_empty_exported_target.dir/depend
 
