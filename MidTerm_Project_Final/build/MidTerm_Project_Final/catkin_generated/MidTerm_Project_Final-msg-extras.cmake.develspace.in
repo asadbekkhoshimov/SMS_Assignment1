@@ -1,2 +1,0 @@
-set(MidTerm_Project_Final_MESSAGE_FILES "")
-set(MidTerm_Project_Final_SERVICE_FILES "/home/ubuntu/SMS_Assignment1/MidTerm_Project_Final/src/MidTerm_Project_Final/srv/WeatherService.srv")

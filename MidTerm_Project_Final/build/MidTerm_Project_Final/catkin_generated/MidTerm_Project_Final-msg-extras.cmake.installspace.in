@@ -1,2 +1,0 @@
-set(MidTerm_Project_Final_MESSAGE_FILES "")
-set(MidTerm_Project_Final_SERVICE_FILES "srv/WeatherService.srv")

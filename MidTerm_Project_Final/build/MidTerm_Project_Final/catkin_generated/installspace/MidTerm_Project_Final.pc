@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/SMS_Assignment1/MidTerm_Project_Final/install
-
-Name: MidTerm_Project_Final
-Description: Description of MidTerm_Project_Final
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

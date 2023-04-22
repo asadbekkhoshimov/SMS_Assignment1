@@ -1,2 +1,0 @@
-MidTerm_Project_Final
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/SMS_Assignment1/MidTerm_Project_Final/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/SMS_Assignment1/MidTerm_Project_Final/install -G Unix Makefiles
