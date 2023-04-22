@@ -1,0 +1,8 @@
+prefix=/home/asadbek/Desktop/my_city_ws/install
+
+Name: my_city
+Description: Description of my_city
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmy_city
+Requires: roscpp rospy std_msgs message_runtime

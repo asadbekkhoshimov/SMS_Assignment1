@@ -1,0 +1,2 @@
+my_city
+-DCATKIN_DEVEL_PREFIX=/home/asadbek/Desktop/my_city_ws/devel -DCMAKE_INSTALL_PREFIX=/home/asadbek/Desktop/my_city_ws/install -G Unix Makefiles

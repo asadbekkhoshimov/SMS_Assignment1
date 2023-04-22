@@ -1,0 +1,10 @@
+(cl:defpackage my_city-srv
+  (:use )
+  (:export
+   "WEATHERSERVICE"
+   "<WEATHERSERVICE-REQUEST>"
+   "WEATHERSERVICE-REQUEST"
+   "<WEATHERSERVICE-RESPONSE>"
+   "WEATHERSERVICE-RESPONSE"
+  ))
+
