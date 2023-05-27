@@ -250,6 +250,7 @@ int main(int argc, char **argv)
 ## Images: 
 <img width="1280" alt="Screenshot 2023-05-28 at 4 04 25 AM (2)" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/d4941c32-79c7-4792-b249-434c4639ce04">
 <img width="1280" alt="Screenshot 2023-05-28 at 4 05 44 AM (2)" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/0dbce9cd-6bf5-4472-89d5-f7bddaeba7c5">
+
 ## Video
 https://youtu.be/8HVijHPld6w
 
