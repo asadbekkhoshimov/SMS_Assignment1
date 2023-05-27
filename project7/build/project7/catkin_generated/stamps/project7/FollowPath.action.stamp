@@ -1,0 +1,10 @@
+# FollowPath.action
+# Goal
+geometry_msgs/Point[] path
+---
+# Result
+float32 total_elapsed_time
+---
+# Feedback
+float32 total_distance_to_path
+

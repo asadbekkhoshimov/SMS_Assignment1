@@ -1,0 +1,38 @@
+
+(cl:in-package :asdf)
+
+(defsystem "project7-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :actionlib_msgs-msg
+               :geometry_msgs-msg
+               :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "FollowPathAction" :depends-on ("_package_FollowPathAction"))
+    (:file "_package_FollowPathAction" :depends-on ("_package"))
+    (:file "FollowPathActionFeedback" :depends-on ("_package_FollowPathActionFeedback"))
+    (:file "_package_FollowPathActionFeedback" :depends-on ("_package"))
+    (:file "FollowPathActionGoal" :depends-on ("_package_FollowPathActionGoal"))
+    (:file "_package_FollowPathActionGoal" :depends-on ("_package"))
+    (:file "FollowPathActionResult" :depends-on ("_package_FollowPathActionResult"))
+    (:file "_package_FollowPathActionResult" :depends-on ("_package"))
+    (:file "FollowPathFeedback" :depends-on ("_package_FollowPathFeedback"))
+    (:file "_package_FollowPathFeedback" :depends-on ("_package"))
+    (:file "FollowPathGoal" :depends-on ("_package_FollowPathGoal"))
+    (:file "_package_FollowPathGoal" :depends-on ("_package"))
+    (:file "FollowPathResult" :depends-on ("_package_FollowPathResult"))
+    (:file "_package_FollowPathResult" :depends-on ("_package"))
+    (:file "Navigate2DAction" :depends-on ("_package_Navigate2DAction"))
+    (:file "_package_Navigate2DAction" :depends-on ("_package"))
+    (:file "Navigate2DActionFeedback" :depends-on ("_package_Navigate2DActionFeedback"))
+    (:file "_package_Navigate2DActionFeedback" :depends-on ("_package"))
+    (:file "Navigate2DActionGoal" :depends-on ("_package_Navigate2DActionGoal"))
+    (:file "_package_Navigate2DActionGoal" :depends-on ("_package"))
+    (:file "Navigate2DActionResult" :depends-on ("_package_Navigate2DActionResult"))
+    (:file "_package_Navigate2DActionResult" :depends-on ("_package"))
+    (:file "Navigate2DFeedback" :depends-on ("_package_Navigate2DFeedback"))
+    (:file "_package_Navigate2DFeedback" :depends-on ("_package"))
+    (:file "Navigate2DGoal" :depends-on ("_package_Navigate2DGoal"))
+    (:file "_package_Navigate2DGoal" :depends-on ("_package"))
+    (:file "Navigate2DResult" :depends-on ("_package_Navigate2DResult"))
+    (:file "_package_Navigate2DResult" :depends-on ("_package"))
+  ))
