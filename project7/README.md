@@ -251,5 +251,6 @@ int main(int argc, char **argv)
 <img width="1280" alt="Screenshot 2023-05-28 at 4 04 25 AM (2)" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/d4941c32-79c7-4792-b249-434c4639ce04">
 <img width="1280" alt="Screenshot 2023-05-28 at 4 05 44 AM (2)" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/0dbce9cd-6bf5-4472-89d5-f7bddaeba7c5">
 ## Video
-![Alt text](https://img.youtube.com/vi/8HVijHPld6w/0.jpg)
+[![Alt text](https://img.youtube.com/vi/8HVijHPld6w/0.jpg)](https://www.youtube.com/watch?v=8HVijHPld6w)
+
 
