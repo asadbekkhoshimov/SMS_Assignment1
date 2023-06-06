@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ubuntu/catkin_make/Homework3/devel/setup.sh
