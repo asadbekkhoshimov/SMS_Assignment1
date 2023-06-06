@@ -1,0 +1,87 @@
+Jun  6 00:00:22 instance-ubuntu-asadbek systemd[1]: logrotate.service: Succeeded.
+Jun  6 00:00:22 instance-ubuntu-asadbek systemd[1]: Finished Rotate log files.
+Jun  6 00:00:23 instance-ubuntu-asadbek systemd[1]: man-db.service: Succeeded.
+Jun  6 00:00:23 instance-ubuntu-asadbek systemd[1]: Finished Daily man-db regeneration.
+Jun  6 00:17:01 instance-ubuntu-asadbek CRON[599177]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 00:53:52 instance-ubuntu-asadbek systemd[1]: Starting Ubuntu Advantage Timer for running repeated jobs...
+Jun  6 00:53:54 instance-ubuntu-asadbek systemd[1]: ua-timer.service: Succeeded.
+Jun  6 00:53:54 instance-ubuntu-asadbek systemd[1]: Finished Ubuntu Advantage Timer for running repeated jobs.
+Jun  6 01:17:01 instance-ubuntu-asadbek CRON[599665]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 01:22:03 instance-ubuntu-asadbek snapd[562274]: storehelpers.go:769: cannot refresh: snap has no updates available: "core18", "core20", "lxd", "oracle-cloud-agent", "snapd"
+Jun  6 02:17:01 instance-ubuntu-asadbek CRON[600992]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 02:24:17 instance-ubuntu-asadbek systemd[1]: Starting Daily apt download activities...
+Jun  6 02:24:47 instance-ubuntu-asadbek apt-helper[601128]: E: Sub-process nm-online returned an error code (1)
+Jun  6 02:24:49 instance-ubuntu-asadbek systemd[1]: Starting Update APT News...
+Jun  6 02:24:49 instance-ubuntu-asadbek systemd[1]: Starting Update the local ESM caches...
+Jun  6 02:24:50 instance-ubuntu-asadbek systemd[1]: apt-news.service: Succeeded.
+Jun  6 02:24:50 instance-ubuntu-asadbek systemd[1]: Finished Update APT News.
+Jun  6 02:24:52 instance-ubuntu-asadbek systemd[1]: esm-cache.service: Succeeded.
+Jun  6 02:24:52 instance-ubuntu-asadbek systemd[1]: Finished Update the local ESM caches.
+Jun  6 02:24:56 instance-ubuntu-asadbek dbus-daemon[899]: [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.1228' (uid=0 pid=601760 comm="/usr/bin/gdbus call --system --dest org.freedeskto" label="unconfined")
+Jun  6 02:24:56 instance-ubuntu-asadbek systemd[1]: Starting PackageKit Daemon...
+Jun  6 02:24:56 instance-ubuntu-asadbek PackageKit: daemon start
+Jun  6 02:24:56 instance-ubuntu-asadbek dbus-daemon[899]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+Jun  6 02:24:56 instance-ubuntu-asadbek systemd[1]: Started PackageKit Daemon.
+Jun  6 02:25:59 instance-ubuntu-asadbek systemd[1]: apt-daily.service: Succeeded.
+Jun  6 02:25:59 instance-ubuntu-asadbek systemd[1]: Finished Daily apt download activities.
+Jun  6 02:30:01 instance-ubuntu-asadbek PackageKit: daemon quit
+Jun  6 02:30:01 instance-ubuntu-asadbek systemd[1]: packagekit.service: Succeeded.
+Jun  6 03:10:01 instance-ubuntu-asadbek CRON[602145]: (root) CMD (test -e /run/systemd/system || SERVICE_MODE=1 /sbin/e2scrub_all -A -r)
+Jun  6 03:17:01 instance-ubuntu-asadbek CRON[602154]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 03:44:30 instance-ubuntu-asadbek systemd[1]: Starting Refresh fwupd metadata and update motd...
+Jun  6 03:44:30 instance-ubuntu-asadbek dbus-daemon[899]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.1231' (uid=112 pid=602162 comm="/usr/bin/fwupdmgr refresh " label="unconfined")
+Jun  6 03:44:30 instance-ubuntu-asadbek systemd[1]: Starting Firmware update daemon...
+Jun  6 03:44:32 instance-ubuntu-asadbek dbus-daemon[899]: [system] Successfully activated service 'org.freedesktop.fwupd'
+Jun  6 03:44:32 instance-ubuntu-asadbek systemd[1]: Started Firmware update daemon.
+Jun  6 03:44:32 instance-ubuntu-asadbek systemd[1]: fwupd-refresh.service: Succeeded.
+Jun  6 03:44:32 instance-ubuntu-asadbek systemd[1]: Finished Refresh fwupd metadata and update motd.
+Jun  6 04:17:01 instance-ubuntu-asadbek CRON[602185]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 05:17:01 instance-ubuntu-asadbek CRON[602218]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 05:44:32 instance-ubuntu-asadbek systemd[1]: fwupd.service: Succeeded.
+Jun  6 06:17:01 instance-ubuntu-asadbek CRON[602283]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 06:25:01 instance-ubuntu-asadbek CRON[602288]: (root) CMD (test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily ))
+Jun  6 06:25:02 instance-ubuntu-asadbek cracklib: no dictionary update necessary.
+Jun  6 06:25:38 instance-ubuntu-asadbek systemd[1]: Starting Daily apt upgrade and clean activities...
+Jun  6 06:26:08 instance-ubuntu-asadbek apt-helper[602374]: E: Sub-process nm-online returned an error code (1)
+Jun  6 06:26:43 instance-ubuntu-asadbek dbus-daemon[899]: [system] Activating via systemd: service name='org.freedesktop.PackageKit' unit='packagekit.service' requested by ':1.1236' (uid=0 pid=602472 comm="/usr/bin/gdbus call --system --dest org.freedeskto" label="unconfined")
+Jun  6 06:26:43 instance-ubuntu-asadbek systemd[1]: Starting PackageKit Daemon...
+Jun  6 06:26:43 instance-ubuntu-asadbek PackageKit: daemon start
+Jun  6 06:26:44 instance-ubuntu-asadbek dbus-daemon[899]: [system] Successfully activated service 'org.freedesktop.PackageKit'
+Jun  6 06:26:44 instance-ubuntu-asadbek systemd[1]: Started PackageKit Daemon.
+Jun  6 06:26:58 instance-ubuntu-asadbek systemd[1]: Starting Cleanup of Temporary Directories...
+Jun  6 06:26:59 instance-ubuntu-asadbek systemd[1]: systemd-tmpfiles-clean.service: Succeeded.
+Jun  6 06:26:59 instance-ubuntu-asadbek systemd[1]: Finished Cleanup of Temporary Directories.
+Jun  6 06:28:31 instance-ubuntu-asadbek systemd[1]: apt-daily-upgrade.service: Succeeded.
+Jun  6 06:28:31 instance-ubuntu-asadbek systemd[1]: Finished Daily apt upgrade and clean activities.
+Jun  6 06:33:29 instance-ubuntu-asadbek PackageKit: daemon quit
+Jun  6 06:33:29 instance-ubuntu-asadbek systemd[1]: packagekit.service: Succeeded.
+Jun  6 07:04:31 instance-ubuntu-asadbek systemd[1]: Starting Ubuntu Advantage Timer for running repeated jobs...
+Jun  6 07:04:34 instance-ubuntu-asadbek systemd[1]: ua-timer.service: Succeeded.
+Jun  6 07:04:34 instance-ubuntu-asadbek systemd[1]: Finished Ubuntu Advantage Timer for running repeated jobs.
+Jun  6 07:12:24 instance-ubuntu-asadbek snapd[562274]: storehelpers.go:769: cannot refresh: snap has no updates available: "core18", "core20", "lxd", "oracle-cloud-agent", "snapd"
+Jun  6 07:17:01 instance-ubuntu-asadbek CRON[603807]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 08:07:23 instance-ubuntu-asadbek systemd[1]: Starting Refresh fwupd metadata and update motd...
+Jun  6 08:07:23 instance-ubuntu-asadbek dbus-daemon[899]: [system] Activating via systemd: service name='org.freedesktop.fwupd' unit='fwupd.service' requested by ':1.1251' (uid=112 pid=603848 comm="/usr/bin/fwupdmgr refresh " label="unconfined")
+Jun  6 08:07:23 instance-ubuntu-asadbek systemd[1]: Starting Firmware update daemon...
+Jun  6 08:07:24 instance-ubuntu-asadbek dbus-daemon[899]: [system] Successfully activated service 'org.freedesktop.fwupd'
+Jun  6 08:07:24 instance-ubuntu-asadbek systemd[1]: Started Firmware update daemon.
+Jun  6 08:07:24 instance-ubuntu-asadbek systemd[1]: fwupd-refresh.service: Succeeded.
+Jun  6 08:07:24 instance-ubuntu-asadbek systemd[1]: Finished Refresh fwupd metadata and update motd.
+Jun  6 08:17:01 instance-ubuntu-asadbek CRON[603868]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 08:17:30 instance-ubuntu-asadbek systemd[1]: Starting Message of the Day...
+Jun  6 08:17:36 instance-ubuntu-asadbek 50-motd-news[603899]:  * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+Jun  6 08:17:36 instance-ubuntu-asadbek 50-motd-news[603899]:    just raised the bar for easy, resilient and secure K8s cluster deployment.
+Jun  6 08:17:36 instance-ubuntu-asadbek 50-motd-news[603899]:    https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+Jun  6 08:17:36 instance-ubuntu-asadbek systemd[1]: motd-news.service: Succeeded.
+Jun  6 08:17:36 instance-ubuntu-asadbek systemd[1]: Finished Message of the Day.
+Jun  6 09:17:01 instance-ubuntu-asadbek CRON[604632]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 10:07:24 instance-ubuntu-asadbek systemd[1]: fwupd.service: Succeeded.
+Jun  6 10:17:01 instance-ubuntu-asadbek CRON[605353]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 11:17:01 instance-ubuntu-asadbek CRON[605517]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 12:17:01 instance-ubuntu-asadbek CRON[605738]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 12:41:01 instance-ubuntu-asadbek CRON[605755]: (root) CMD (   test -x /etc/cron.daily/popularity-contest && /etc/cron.daily/popularity-contest --crond)
+Jun  6 12:45:16 instance-ubuntu-asadbek systemd[1]: Started Session 1609 of user ubuntu.
+Jun  6 13:17:01 instance-ubuntu-asadbek CRON[606000]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Jun  6 13:47:11 instance-ubuntu-asadbek systemd[1]: Starting Ubuntu Advantage Timer for running repeated jobs...
+Jun  6 13:47:13 instance-ubuntu-asadbek systemd[1]: ua-timer.service: Succeeded.
+Jun  6 13:47:13 instance-ubuntu-asadbek systemd[1]: Finished Ubuntu Advantage Timer for running repeated jobs.

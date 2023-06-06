@@ -1,0 +1,6 @@
+file_list.txt
+get_date.sh
+redirect_output.sh
+week_13_lab
+week_14_lab
+week_7_lab
