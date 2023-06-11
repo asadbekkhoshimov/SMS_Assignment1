@@ -11,23 +11,20 @@ def travel_companion(destination):
     # 1. Print current weather
     resp = weather_client(destination)
     if resp.city_name == "Invalid city":
-        print("\nWeather Conditions:")
-        print("    · City not found: Please verify the city name and try again.")
+        print("\nI'm sorry, I could not find the city you mentioned. Please verify the city name and try again.")
     else:
-        print(f"\nWeather Conditions in {resp.city_name}:")
+        print(f"Weather Conditions in {resp.city_name}:")
         print(f"    · Temperature: {resp.temperature}°C")
         print(f"    · Humidity: {resp.humidity}%")
         print(f"    · Weather Description: {resp.description}\n")
 
     # 2. Print travel distance
+    print("Travel Information:")
     directions, distance, time = get_directions(destination)
     if directions is not None and distance is not None and time is not None:
-        print(f"\nTravel Distance to {destination}:")
-        print(f"    · Estimated Distance: {distance} miles")
-        print(f"    · Estimated Time: {time} minutes\n")
-        print("Travel Directions:")
-        for direction in directions:
-            print(f"    · {direction}")
+        print(f"    · Best Mode of Transportation: {directions}")
+        print(f"    · Estimated Travel Distance: {distance} miles")
+        print(f"    · Estimated Travel Time: {time} minutes")
 
     # 3. Print alerts/notifications
     severe_conditions = ["Extreme", "Thunderstorm", "Heavy Rain"]
@@ -36,7 +33,7 @@ def travel_companion(destination):
         print(f"    · Severe Weather Condition: {resp.description} in {resp.city_name}!\n")
 
     # 4. Print transportation method
-    print("\nRecommended Attire:")
+    print("\nRecommended Attire based on Weather:")
     print("    · " + suggest_clothes(resp.temperature))
 
     print("\n*** End of Travel Report for " + destination + " ***\n")
