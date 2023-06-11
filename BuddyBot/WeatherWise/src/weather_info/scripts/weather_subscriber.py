@@ -23,6 +23,13 @@ def handle_weather_info(req):
     else:
         return WeatherResponse("Invalid city", 0, 0, "")
 
+def handle_weather_alerts(req):
+    while True:
+        response = handle_weather_info(req)
+        if "thunderstorm" in response.description.lower() or "rain" in response.description.lower() or "snow" in response.description.lower():
+            print(f"Alert! Severe weather condition in {response.city_name}: {response.description}")
+        time.sleep(5)  # Wait for 5 seconds before checking again
+
 def weather_service():
     rospy.init_node('weather_service_node', anonymous=True)
     rospy.Service('weather_info', Weather, handle_weather_info)
