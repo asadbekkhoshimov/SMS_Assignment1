@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/Final_Project/WeatherWise/devel
+
+Name: weather_forecast
+Description: Description of weather_forecast
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

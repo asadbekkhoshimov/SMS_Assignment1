@@ -1,0 +1,2 @@
+weather_forecast
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/Final_Project/WeatherWise/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/Final_Project/WeatherWise/install -G Unix Makefiles
