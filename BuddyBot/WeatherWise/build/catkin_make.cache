@@ -1,0 +1,2 @@
+weather_info
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/SMS_Assignment1/BuddyBot/WeatherWise/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/SMS_Assignment1/BuddyBot/WeatherWise/install -G Unix Makefiles

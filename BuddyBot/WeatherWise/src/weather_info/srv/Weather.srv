@@ -1,0 +1,7 @@
+string city
+---
+string city_name
+float32 temperature
+float32 humidity
+string description
+

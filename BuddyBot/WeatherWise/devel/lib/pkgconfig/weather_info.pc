@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/SMS_Assignment1/BuddyBot/WeatherWise/devel
+
+Name: weather_info
+Description: Description of weather_info
+Version: 0.0.0
+Cflags: -I/home/ubuntu/SMS_Assignment1/BuddyBot/WeatherWise/devel/include
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs message_runtime
