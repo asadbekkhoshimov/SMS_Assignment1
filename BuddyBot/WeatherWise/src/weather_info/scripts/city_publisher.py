@@ -5,6 +5,37 @@ import time
 import json
 import requests
 
+def travel_companion(destination):
+    print(f"\n*** Travel Companion Report for {destination} ***")
+
+    # 1. Print current weather
+    resp = weather_client(destination)
+    if resp.city_name == "Invalid city":
+        print("Invalid city")
+    else:
+        print(f"\nCity Name: {resp.city_name}")
+        print(f"Temperature: {resp.temperature}°C")
+        print(f"Humidity: {resp.humidity}%")
+        print(f"Description: {resp.description}\n")
+
+    # 2. Print travel distance
+    directions, distance, time = get_directions(destination)
+    if directions is not None and distance is not None and time is not None:
+        print(f"\nDistance: {distance} miles")
+        print(f"Estimated Travel Time: {time}")
+        print("Directions:")
+        for direction in directions:
+            print(direction)
+
+    # 3. Print alerts/notifications
+    severe_conditions = ["Extreme", "Thunderstorm", "Heavy Rain"]
+    if resp.description in severe_conditions:
+        print(f"Alert: Severe weather condition detected in {resp.city_name}!\n")
+
+    # 4. Print transportation method
+    print("Recommended Clothes: " + suggest_clothes(resp.temperature))
+
+
 def get_directions(destination):
     base_url = "https://www.mapquestapi.com/directions/v2/route?"
     api_key = "JAEpAr2sJYI7LMUM2pSxuXQjEFB1w5cl"
@@ -120,7 +151,8 @@ def main():
         print("2. Travel Distance")
         print("3. Alerts/Notifications")
         print("4. Transportation Method")
-        print("5. Exit")
+        print("5. Travel Companion")
+        print("6. Exit")
         choice = input("Enter your choice: ")
 
         if choice == "1":
@@ -158,7 +190,10 @@ def main():
                 print("Directions:")
                 for direction in directions:
                     print(direction)
-        elif choice == "4":
+        elif choice == "5":
+            destination = input("Where would you like to travel to? ")
+            travel_companion(destination)
+        elif choice == "6":
             break
         else:
             print("Invalid choice. Please enter a number between 1 and 4.\n")
