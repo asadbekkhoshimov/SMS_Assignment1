@@ -11,32 +11,35 @@ def travel_companion(destination):
     # 1. Print current weather
     resp = weather_client(destination)
     if resp.city_name == "Invalid city":
-        print("I'm sorry, I could not find the city you mentioned. Please verify the city name and try again.")
+        print("\nWeather Conditions:")
+        print("    · City not found: Please verify the city name and try again.")
     else:
-        print(f"In {resp.city_name}, the current weather conditions are as follows:")
-        print(f"Temperature: {resp.temperature}°C")
-        print(f"Humidity: {resp.humidity}%")
-        print(f"Weather Description: {resp.description}\n")
+        print(f"\nWeather Conditions in {resp.city_name}:")
+        print(f"    · Temperature: {resp.temperature}°C")
+        print(f"    · Humidity: {resp.humidity}%")
+        print(f"    · Weather Description: {resp.description}\n")
 
     # 2. Print travel distance
     directions, distance, time = get_directions(destination)
     if directions is not None and distance is not None and time is not None:
-        print(f"The estimated travel distance to {destination} is {distance} miles.")
-        print(f"The estimated travel time is approximately {time} minutes.")
-        print("Here are the directions for your travel:")
+        print(f"\nTravel Distance to {destination}:")
+        print(f"    · Estimated Distance: {distance} miles")
+        print(f"    · Estimated Time: {time} minutes\n")
+        print("Travel Directions:")
         for direction in directions:
-            print(direction)
+            print(f"    · {direction}")
 
     # 3. Print alerts/notifications
     severe_conditions = ["Extreme", "Thunderstorm", "Heavy Rain"]
     if resp.description in severe_conditions:
-        print(f"\nPlease note: There are severe weather conditions reported in {resp.city_name}!\n")
+        print(f"\nAlerts/Notifications:")
+        print(f"    · Severe Weather Condition: {resp.description} in {resp.city_name}!\n")
 
     # 4. Print transportation method
-    print("Based on the weather conditions and your destination, I would recommend wearing the following: " + suggest_clothes(resp.temperature))
+    print("\nRecommended Attire:")
+    print("    · " + suggest_clothes(resp.temperature))
 
     print("\n*** End of Travel Report for " + destination + " ***\n")
-
 
 def get_directions(destination):
     base_url = "https://www.mapquestapi.com/directions/v2/route?"
