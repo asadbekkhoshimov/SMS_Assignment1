@@ -10,7 +10,6 @@ def get_directions(destination):
     api_key = "JAEpAr2sJYI7LMUM2pSxuXQjEFB1w5cl"
     start_location = "Incheon"
 
-    # Replace spaces in the destination with '+' for URL encoding
     destination = destination.replace(" ", "+")
 
     modes = ["fastest", "shortest", "bicycle", "pedestrian"]
@@ -18,38 +17,33 @@ def get_directions(destination):
     distances = []
     times = []
 
+    directions = None
     for i, mode in enumerate(modes):
         final_url = f"{base_url}key={api_key}&from={start_location}&to={destination}&routeType={mode}"
-
         try:
             response = requests.get(final_url)
             data = response.json()
 
-            # Check if the request was successful
             if response.status_code != 200:
                 print("Error: Unable to fetch directions. Please try again.")
-                return
+                return None, None, None
 
-            # Check if a route was found
             if "route" not in data or "legs" not in data["route"] or len(data["route"]["legs"]) == 0:
                 print("Error: No route found to the specified destination.")
-                return
+                return None, None, None
 
-            # Get the distance and time from the response
             distance = data["route"]["distance"] * 1.60934  # Convert miles to kilometers
             time = data["route"]["time"]
 
             distances.append(distance)
             times.append(time)
 
-            # Print out the time and distance for each mode
             print(f"{mode_names[i]}: Distance = {distance:.2f} km, Time = {time//3600} hours {(time%3600)//60} minutes")
 
         except requests.exceptions.RequestException as e:
             print(f"Error: An error occurred while fetching directions. {e}")
-            return
+            return None, None, None
 
-    # Determine the best mode of transportation based on distance
     best_distance = min(distances)
 
     if best_distance < 1:
@@ -63,14 +57,14 @@ def get_directions(destination):
     else:
         best_mode = "By Plane"
 
-    # Determine the time for the best mode of transportation
     best_time = times[distances.index(best_distance)]
     best_time_hours = best_time // 3600
     best_time_minutes = (best_time % 3600) // 60
 
-    # Print out the best mode of transportation and time
     print(f"\nThe best mode of transportation to {destination} is {best_mode}.")
     print(f"Estimated travel time: {best_time_hours} hours {best_time_minutes} minutes.")
+    return directions, best_distance, best_time
+
 
 def weather_client(city_name, service_name='weather_info'):
     rospy.wait_for_service(service_name)
