@@ -108,16 +108,18 @@ def weather_client(city_name, service_name='weather_info'):
     except rospy.ServiceException as e:
         print("Service call failed: %s" % e)
 def suggest_clothes(temperature):
-    if temperature < 0:
-        return "Coat, Hat, Gloves, Warm Pants, Boots"
+    if temperature < -10:
+        return "Thermal Underwear, Heavy Coat, Winter Hat, Gloves, Insulated Boots"
+    elif temperature < 0:
+        return "Heavy Coat, Hat, Gloves, Warm Pants, Boots"
     elif temperature < 10:
-        return "Jacket, Long Sleeve Shirt, Pants, Shoes"
+        return "Jacket, Long Sleeve Shirt, Jeans, Socks, Shoes"
     elif temperature < 20:
-        return "Sweater, Jeans, Shoes"
+        return "Light Jacket, T-Shirt, Pants, Socks, Shoes"
     elif temperature < 30:
-        return "T-Shirt, Shorts, Sandals"
+        return "T-Shirt, Shorts, Sun Hat, Sunglasses, Sandals"
     else:
-        return "Tank Top, Shorts, Sandals"
+        return "Tank Top, Shorts, Sunglasses, Sunscreen, Flip Flops"
 def check_severe_weather(resp):
     if resp.description == "thunderstorm":
         return "Alert: Thunderstorm in the area!"
