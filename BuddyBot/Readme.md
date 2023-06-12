@@ -1,4 +1,7 @@
 ## WeatherWise
+* BuddyBot uses advanced APIs like OpenWeather and MapQuest to provide accurate weather forecasts and location-based services.
+
+![<img width="603" alt="Screenshot 2023-06-13 at 3 11 21 AM" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/b79b5230-8c43-4708-9466-5185aa01ef12">
 ![image](https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/d1106d2e-0d64-4528-8e69-f540014ad152)
 
 ## Car Monitoring:
