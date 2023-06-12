@@ -37,15 +37,19 @@ class Car:
         time.sleep(3)
         self.speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
 
-    def monitor_speed(self):
-        while not rospy.is_shutdown():
-            if self.speed > 0:
-                self.distance -= self.speed / 3600  # decrease the distance based on speed and time
-                print(f'Distance to {self.city}: {self.distance} km')
-                if self.distance <= 0:
-                    print('Arrived at destination')
-                    rospy.signal_shutdown('Arrival')
-            time.sleep(1)
+def monitor_speed(self):
+    while not rospy.is_shutdown():
+        if self.speed > 0:
+            self.distance -= self.speed / 3600  # decrease the distance based on speed and time
+            warning_msg = ""
+            if self.weather in ['rainy', 'snowy', 'windy']:
+                warning_msg = "Warning: Please drive slowly due to bad weather conditions."
+            print(f'Travelling to {self.city}, total distance="60km", remain="{self.distance} km", current_speed="{self.speed} km/h", weather_condition="{self.weather}", {warning_msg}')
+            if self.distance <= 0:
+                print('Arrived at destination')
+                rospy.signal_shutdown('Arrival')
+        time.sleep(1)
+
 
 def listener():
     # Initialize node
