@@ -6,6 +6,10 @@ import random
 
 class TemperatureController:
     def __init__(self):
+        
+        self.pub_heating_status = rospy.Publisher('heating_status', String, queue_size=10)
+        self.pub_ac_status = rospy.Publisher('ac_status', String, queue_size=10)
+        
         self.current_temp = random.uniform(2, 30)  # Initial room temperature
         self.target_temp = random.uniform(10, 25)  # Initial desired temperature
         self.temperature_change = 0  # Change in temperature per second
@@ -23,17 +27,21 @@ class TemperatureController:
         self.control_temperature()
 
     def control_air_conditioner(self):
+        self.pub_ac_status.publish("on")
         while self.current_temp > self.target_temp:
             time.sleep(1)  # Wait for 1 second
             self.current_temp -= 0.8
             print(f"Current temperature: {self.current_temp} degree Celsius")
-        print(f"Air conditioner turned off. Current room temperature: {self.current_temp} degree Celsius")
+    self.pub_ac_status.publish("off")
+    print(f"Air conditioner turned off. Current room temperature: {self.current_temp} degree Celsius")
 
     def control_heating_system(self):
+        self.pub_heating_status.publish("on")
         while self.current_temp < self.target_temp:
             time.sleep(1)  # Wait for 1 second
             self.current_temp += 0.8
             print(f"Current temperature: {self.current_temp} degree Celsius")
+        self.pub_heating_status.publish("off")
         print(f"Heating system turned off. Current room temperature: {self.current_temp} degree Celsius")
 
     def control_temperature(self):
