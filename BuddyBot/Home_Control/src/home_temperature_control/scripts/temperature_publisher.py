@@ -8,7 +8,7 @@ def talker():
     rate = rospy.Rate(1) # 1hz
     while not rospy.is_shutdown():
         temp = float(input("Enter current room temperature: "))
-        rospy.loginfo(f"Room temperature: {temp} degree Celsius")
+        rospy.loginfo("Room temperature: {} degree Celsius".format(temp))
         pub.publish(temp)
         rate.sleep()
 
