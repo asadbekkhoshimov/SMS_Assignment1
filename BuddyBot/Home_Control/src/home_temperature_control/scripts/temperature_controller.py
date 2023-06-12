@@ -32,8 +32,8 @@ class TemperatureController:
             time.sleep(1)  # Wait for 1 second
             self.current_temp -= 0.8
             print(f"Current temperature: {self.current_temp} degree Celsius")
-    self.pub_ac_status.publish("off")
-    print(f"Air conditioner turned off. Current room temperature: {self.current_temp} degree Celsius")
+        self.pub_ac_status.publish("off")
+        print(f"Air conditioner turned off. Current room temperature: {self.current_temp} degree Celsius")
 
     def control_heating_system(self):
         self.pub_heating_status.publish("on")
@@ -43,6 +43,7 @@ class TemperatureController:
             print(f"Current temperature: {self.current_temp} degree Celsius")
         self.pub_heating_status.publish("off")
         print(f"Heating system turned off. Current room temperature: {self.current_temp} degree Celsius")
+
 
     def control_temperature(self):
         if self.current_temp is None:
