@@ -2,13 +2,17 @@
 BuddyBot serves as an assistant robot, proficient in measuring room temperature and controlling heating and cooling systems. This function allows BuddyBot to maintain optimal room conditions, either through manual input from the user or through automatic adjustments based on pre-defined settings. This integration of robotics with home automation enables smart indoor temperature management, creating a comfortable living environment.
 
 # Home Control
-## BuddyBot is an assistant robot adept at measuring room temperature and controlling heating and cooling systems. It operates both manually and automatically to maintain optimal room conditions.
+### BuddyBot is an assistant robot adept at measuring room temperature and controlling heating and cooling systems. It operates both manually and automatically to maintain optimal room conditions.
+
+<div style="border: 2px solid black; padding: 10px;">
+    <img src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/eae5758d-157b-4125-a83e-6777bd7f3294" alt="Screenshot 2023-06-13 at 2 34 18 AM" width="1238">
+</div>
 
 ## The BuddyBot project merges robotics with home automation, offering smart indoor temperature management. It can monitor and adjust room temperature as per user preferences or automatically.
 
 <img width="1231" alt="Screenshot 2023-06-13 at 2 36 13 AM" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/85cba63b-0e28-4c54-ab68-6070fcad16b9">
 
-<img width="1238" alt="Screenshot 2023-06-13 at 2 34 18 AM" src="https://github.com/asadbekkhoshimov/SMS_Assignment1/assets/84382619/eae5758d-157b-4125-a83e-6777bd7f3294">
+
 
 
 
