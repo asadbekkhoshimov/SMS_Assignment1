@@ -8,7 +8,7 @@ import threading
 
 class Car:
     def __init__(self):
-        self.speed = 0
+        self.speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
         self.distance = random.randint(30, 60)  # random distance in km
         self.city = input('Where are you traveling? ')
         self.weather = ""
@@ -46,7 +46,7 @@ class Car:
                 warning_msg = ""
                 if self.weather in ['rainy', 'snowy', 'windy']:
                     warning_msg = "Warning: Please drive slowly due to bad weather conditions."
-                print(f'Travelling to {self.city}, total distance="60km", remain="{self.distance} km", current_speed="{self.speed} km/h", weather_condition="{self.weather}", {warning_msg}')
+                print(f'Travelling to {self.city}, total distance="60km", remain="{int(self.distance)} km", \ncurrent_speed="{self.speed} km/h", weather_condition="{self.weather}", \n{warning_msg}')
                 if self.distance <= 0:
                     print('Arrived at destination')
                     rospy.signal_shutdown('Arrival')
