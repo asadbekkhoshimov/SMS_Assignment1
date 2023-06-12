@@ -6,7 +6,7 @@ import random
 
 class TemperatureController:
     def __init__(self):
-        self.current_temp = None
+        self.current_temp = random.uniform(2, 30)  # Initial room temperature
         self.target_temp = None
         self.temperature_change = 0  # Change in temperature per second
         self.mode = None  # Operation mode: 'manual' or 'automatic'
@@ -35,7 +35,7 @@ class TemperatureController:
         if self.current_temp is None:
             return
 
-        if self.mode == 'manual':
+        while self.mode == 'manual':
             print("Choose a system:")
             print("1. Air Conditioner")
             print("2. Heating System")
@@ -46,19 +46,14 @@ class TemperatureController:
 
             elif system_choice == '2':
                 self.control_heating_system()
-                
-        elif self.mode == 'automatic':
-            if self.current_temp < self.target_temp - 3:
+
+        if self.mode == 'automatic':
+            if self.current_temp < self.target_temp:
                 print("Turning on heating system...")
-                self.temperature_change = 0.8
-            elif self.current_temp > self.target_temp + 3:
+                self.control_heating_system()
+            elif self.current_temp > self.target_temp:
                 print("Turning on air conditioner...")
-                self.temperature_change = -0.8
-            else:
-                self.temperature_change = 0
-                print("Maintaining current temperature...")
-                if self.current_temp == self.target_temp:
-                    self.current_temp += random.uniform(-3, 3)
+                self.control_air_conditioner()
         self.adjust_temperature()
 
     def adjust_temperature(self):
