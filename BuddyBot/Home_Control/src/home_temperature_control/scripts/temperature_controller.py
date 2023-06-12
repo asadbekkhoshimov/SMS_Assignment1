@@ -3,6 +3,7 @@ import rospy
 from std_msgs.msg import Float32
 import time
 import random
+
 class TemperatureController:
     def __init__(self):
         self.current_temp = None
@@ -11,6 +12,7 @@ class TemperatureController:
         self.mode = None  # Operation mode: 'manual' or 'automatic'
         rospy.init_node('temperature_controller', anonymous=True)
         rospy.Subscriber('room_temperature', Float32, self.temp_callback)
+
     def temp_callback(self, data):
         self.current_temp = data.data
         self.control_temperature()
@@ -27,7 +29,7 @@ class TemperatureController:
             time.sleep(1)  # Wait for 1 second
             self.current_temp += 0.8
             print(f"Current temperature: {self.current_temp} degree Celsius")
-    print(f"Heating system turned off. Current room temperature: {self.current_temp} degree Celsius")
+        print(f"Heating system turned off. Current room temperature: {self.current_temp} degree Celsius")
 
     def control_temperature(self):
         if self.current_temp is None:
