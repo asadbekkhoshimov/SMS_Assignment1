@@ -12,20 +12,25 @@ class TemperatureController:
         self.mode = None  # Operation mode: 'manual' or 'automatic'
         rospy.init_node('temperature_controller', anonymous=True)
         rospy.Subscriber('room_temperature', Float32, self.temp_callback)
+        rospy.Subscriber('desired_temperature', Float32, self.desired_temp_callback)
 
     def temp_callback(self, data):
         self.current_temp = data.data
         self.control_temperature()
 
+    def desired_temp_callback(self, data):
+        self.target_temp = data.data
+        self.control_temperature()
+
     def control_air_conditioner(self):
-        while self.current_temp > 10:
+        while self.current_temp > self.target_temp:
             time.sleep(1)  # Wait for 1 second
             self.current_temp -= 0.8
             print(f"Current temperature: {self.current_temp} degree Celsius")
         print(f"Air conditioner turned off. Current room temperature: {self.current_temp} degree Celsius")
 
     def control_heating_system(self):
-        while self.current_temp < 22:
+        while self.current_temp < self.target_temp:
             time.sleep(1)  # Wait for 1 second
             self.current_temp += 0.8
             print(f"Current temperature: {self.current_temp} degree Celsius")
@@ -54,7 +59,6 @@ class TemperatureController:
             elif self.current_temp > self.target_temp:
                 print("Turning on air conditioner...")
                 self.control_air_conditioner()
-        self.adjust_temperature()
 
     def adjust_temperature(self):
         time.sleep(1)  # Wait for 1 second
@@ -65,6 +69,4 @@ if __name__ == '__main__':
     controller = TemperatureController()
     while True:
         controller.mode = input("Enter operation mode (manual/automatic): ")
-        if controller.mode == 'automatic':
-            controller.target_temp = float(input("Enter desired room temperature: "))
         rospy.spin()
