@@ -14,6 +14,21 @@ class TemperatureController:
     def temp_callback(self, data):
         self.current_temp = data.data
         self.control_temperature()
+
+    def control_air_conditioner(self):
+        while self.current_temp > 10:
+            time.sleep(1)  # Wait for 1 second
+            self.current_temp -= 0.8
+            print(f"Current temperature: {self.current_temp} degree Celsius")
+        print(f"Air conditioner turned off. Current room temperature: {self.current_temp} degree Celsius")
+
+    def control_heating_system(self):
+        while self.current_temp < 22:
+            time.sleep(1)  # Wait for 1 second
+            self.current_temp += 0.8
+            print(f"Current temperature: {self.current_temp} degree Celsius")
+    print(f"Heating system turned off. Current room temperature: {self.current_temp} degree Celsius")
+
     def control_temperature(self):
         if self.current_temp is None:
             return
@@ -25,26 +40,10 @@ class TemperatureController:
             system_choice = input("Your choice (1-2): ")
 
             if system_choice == '1':
-                print("Air Conditioner:")
-                print("1. On")
-                print("2. Off")
-                ac_choice = input("Your choice (on/off): ")
-                if ac_choice.lower() == 'on':
-                    self.temperature_change = -0.8
-                elif ac_choice.lower() == 'off':
-                    self.temperature_change = 0
-                    print(f"Current room temperature: {self.current_temp} degree Celsius")
+                self.control_air_conditioner()
 
-        elif system_choice == '2':
-            print("Heating System:")
-            print("1. On")
-            print("2. Off")
-            heating_choice = input("Your choice (on/off): ")
-            if heating_choice.lower() == 'on':
-                self.temperature_change = 0.8
-            elif heating_choice.lower() == 'off':
-                self.temperature_change = 0
-                print(f"Current room temperature: {self.current_temp} degree Celsius")
+            elif system_choice == '2':
+                self.control_heating_system()
                 
         elif self.mode == 'automatic':
             if self.current_temp < self.target_temp - 3:
