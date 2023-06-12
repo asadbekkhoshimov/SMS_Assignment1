@@ -7,7 +7,7 @@ import random
 class TemperatureController:
     def __init__(self):
         self.current_temp = random.uniform(2, 30)  # Initial room temperature
-        self.target_temp = None
+        self.target_temp = random.uniform(10, 25)  # Initial desired temperature
         self.temperature_change = 0  # Change in temperature per second
         self.mode = None  # Operation mode: 'manual' or 'automatic'
         rospy.init_node('temperature_controller', anonymous=True)
