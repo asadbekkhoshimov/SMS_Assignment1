@@ -52,3 +52,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_speed_monitoring" TYPE FILE FILES "/home/ubuntu/SMS_Assignment1/BuddyBot/Car_Speed_Monitoring/src/car_speed_monitoring/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/car_speed_monitoring" TYPE PROGRAM FILES "/home/ubuntu/SMS_Assignment1/BuddyBot/Car_Speed_Monitoring/build/car_speed_monitoring/catkin_generated/installspace/car.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/car_speed_monitoring" TYPE PROGRAM FILES "/home/ubuntu/SMS_Assignment1/BuddyBot/Car_Speed_Monitoring/build/car_speed_monitoring/catkin_generated/installspace/weather.py")
+endif()
+

@@ -1,0 +1,2 @@
+home_temperature_control
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/SMS_Assignment1/BuddyBot/Home_Control/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/SMS_Assignment1/BuddyBot/Home_Control/install -G Unix Makefiles
