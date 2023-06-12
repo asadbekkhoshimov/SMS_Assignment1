@@ -8,7 +8,8 @@ import threading
 
 class Car:
     def __init__(self):
-        self.speed = random.randint(100, 170)  # random speed between 100 and 200 km/h
+        self.base_speed = random.randint(100, 200)  # random base speed between 100 and 200 km/h
+        self.speed = self.base_speed
         self.distance = random.randint(30, 60)  # random distance in km
         self.city = input('Where are you traveling? ')
         self.weather = ""
@@ -23,21 +24,21 @@ class Car:
     def adjust_speed(self, weather):
         self.weather = weather.data
         if weather.data == 'sunny':
-            self.speed = 100
+            self.base_speed = 80
         elif weather.data == 'rainy':
-            self.speed = 60
+            self.base_speed = 60
         elif weather.data == 'snowy':
-            self.speed = 30
+            self.base_speed = 50
         elif weather.data == 'windy':
-            self.speed = 70
+            self.base_speed = 70
         else:
-            self.speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
+            self.base_speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
 
-        print(f'Speed adjusted to: {self.speed} km/h due to {weather.data} weather')
+        print(f'Base speed adjusted to: {self.base_speed} km/h due to {weather.data} weather')
 
         # Let's adjust the speed for only 3 seconds
-        time.sleep(5)
-        self.speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
+        time.sleep(3)
+        self.base_speed = random.randint(100, 200)  # random base speed between 100 and 200 km/h
 
     def monitor_speed(self):
         while not rospy.is_shutdown():
@@ -46,6 +47,10 @@ class Car:
                 warning_msg = ""
                 if self.weather in ['rainy', 'snowy', 'windy']:
                     warning_msg = "Warning: Please drive slowly due to bad weather conditions."
+                
+                # Change the actual speed by a random amount up to +/-10 from the base speed
+                self.speed = random.randint(self.base_speed - 10, self.base_speed + 10)
+                
                 print(f'Travelling to {self.city}, total distance="60km", remain="{int(self.distance)} km", \ncurrent_speed="{self.speed} km/h", weather_condition="{self.weather}", \n{warning_msg}')
                 if self.distance <= 0:
                     print('Arrived at destination')
