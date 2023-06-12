@@ -45,15 +45,9 @@ class TemperatureController:
         self.adjust_temperature()
 
     def adjust_temperature(self):
-        if self.mode == 'manual':
-            time.sleep(1)  # Wait for 1 second
-            self.current_temp += self.temperature_change
-            print(f"Current temperature: {self.current_temp} degree Celsius")
-        elif self.mode == 'automatic':
-            while abs(self.current_temp - self.target_temp) > 3:
-                time.sleep(1)  # Wait for 1 second
-                self.current_temp += self.temperature_change
-                print(f"Current temperature: {self.current_temp} degree Celsius")
+        time.sleep(1)  # Wait for 1 second
+        self.current_temp += self.temperature_change
+        print(f"Current temperature: {self.current_temp} degree Celsius")
 
 if __name__ == '__main__':
     controller = TemperatureController()
