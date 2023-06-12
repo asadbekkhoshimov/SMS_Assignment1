@@ -8,6 +8,9 @@ import threading
 
 class Car:
     def __init__(self):
+        self.setup_new_trip()
+
+    def setup_new_trip(self):
         self.base_speed = random.randint(100, 200)  # random base speed between 100 and 200 km/h
         self.speed = self.base_speed
         self.distance = random.randint(30, 60)  # random distance in km
@@ -28,6 +31,15 @@ class Car:
 
     def adjust_speed(self, weather):
         self.weather_conditions.add(weather.data)
+        self.weather = weather.data
+        if self.weather == 'rainy':
+            self.base_speed = 70
+        elif self.weather == 'snowy':
+            self.base_speed = 50
+        elif self.weather == 'windy':
+            self.base_speed = 80
+        else:
+            self.base_speed = random.randint(100, 200)
 
     def monitor_speed(self):
         start_time = time.time()
@@ -51,6 +63,7 @@ class Car:
         print(f"Maximum Speed: {self.max_speed} km/h")
         print(f"Average Speed: {self.total_speed/self.speed_readings} km/h")
         print(f"Weather Conditions Encountered: {self.weather_conditions}")
+        self.setup_new_trip()
 
 
 def listener():
