@@ -8,7 +8,7 @@ import threading
 
 class Car:
     def __init__(self):
-        self.speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
+        self.speed = random.randint(100, 170)  # random speed between 100 and 200 km/h
         self.distance = random.randint(30, 60)  # random distance in km
         self.city = input('Where are you traveling? ')
         self.weather = ""
@@ -23,11 +23,11 @@ class Car:
     def adjust_speed(self, weather):
         self.weather = weather.data
         if weather.data == 'sunny':
-            self.speed = 80
+            self.speed = 100
         elif weather.data == 'rainy':
             self.speed = 60
         elif weather.data == 'snowy':
-            self.speed = 50
+            self.speed = 30
         elif weather.data == 'windy':
             self.speed = 70
         else:
@@ -36,7 +36,7 @@ class Car:
         print(f'Speed adjusted to: {self.speed} km/h due to {weather.data} weather')
 
         # Let's adjust the speed for only 3 seconds
-        time.sleep(3)
+        time.sleep(5)
         self.speed = random.randint(100, 200)  # random speed between 100 and 200 km/h
 
     def monitor_speed(self):
