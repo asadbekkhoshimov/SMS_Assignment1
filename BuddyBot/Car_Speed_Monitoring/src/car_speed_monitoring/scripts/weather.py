@@ -23,4 +23,3 @@ if __name__ == '__main__':
         weather_publisher()
     except rospy.ROSInterruptException:
         pass
-
